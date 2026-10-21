@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tenses B1+: Perfect &amp; Continuous</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b2a20;--card:#12382b;--ink:#fff;--mut:#b9d3c8;--pink:#f6a8c4;--blk:#07120d;--ok:#8be3b0;--bad:#ff8a8a;--bd:#245443;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:radial-gradient(circle at 80% -10%,#1b5640 0,var(--bg) 55%);background-color:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.55;min-height:100%}
+.wrap{max-width:820px;margin:0 auto;padding:24px 16px 60px}
+header{text-align:center;padding:24px 0 4px}
+h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.9rem,6vw,3rem);margin:0;font-weight:600}
+h1 em{color:var(--pink)}
+.sub{color:var(--mut);margin:.4rem 0 0}
+nav{display:flex;gap:8px;overflow-x:auto;padding:14px 0;position:sticky;top:env(safe-area-inset-top,0px);background:linear-gradient(var(--bg) 70%,transparent);z-index:5}
+button,input,textarea{font-family:'DM Sans',sans-serif}
+nav button,.chip{flex:none;background:var(--blk);color:var(--ink);border:1px solid var(--bd);padding:9px 16px;border-radius:99px;font-weight:500;font-size:.9rem;cursor:pointer}
+nav button.on,.chip.on{background:var(--pink);color:var(--blk);border-color:var(--pink)}
+section{display:none}section.on{display:block}
+h2{font-family:'Playfair Display',serif;font-size:1.7rem;margin:.2rem 0}
+.lead{color:var(--mut);margin:0 0 14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:16px 18px}
+.card h3{margin:0 0 4px;color:var(--pink);font-family:'Playfair Display',serif;font-size:1.2rem}
+.form{display:inline-block;background:var(--blk);border-radius:8px;padding:2px 9px;font-size:.82rem;color:var(--ok);margin-bottom:6px}
+.card p{margin:4px 0;color:var(--mut);font-size:.95rem}
+.test{border-top:1px dashed var(--bd);margin-top:8px;padding-top:6px;color:var(--pink)!important;font-style:italic}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:15px 18px;margin:10px 0}
+.s{font-family:'Playfair Display',serif;font-size:1.2rem;margin:0 0 10px}
+.hint{color:var(--mut);font-size:.85rem;margin:0 0 8px}
+.btn{background:var(--pink);color:var(--blk);border:0;border-radius:12px;padding:9px 16px;font-weight:700;cursor:pointer;font-size:.9rem}
+.btn.ghost{background:var(--blk);color:var(--ink);border:1px solid var(--bd)}
+.rev{display:none;margin-top:10px;padding:10px 14px;border-left:3px solid var(--pink);background:rgba(0,0,0,.2);border-radius:0 10px 10px 0}
+.rev.show{display:block}
+.tag{display:inline-block;background:var(--pink);color:var(--blk);font-weight:700;font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;border-radius:6px;padding:2px 8px;margin-bottom:4px}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opts button{background:var(--blk);color:var(--ink);border:1px solid var(--bd);border-radius:12px;padding:9px 14px;cursor:pointer;font-weight:500}
+.opts button:hover:not(:disabled){border-color:var(--pink)}
+.ok{background:var(--ok)!important;color:var(--blk)!important;border-color:var(--ok)!important}
+.no{background:var(--bad)!important;color:var(--blk)!important;border-color:var(--bad)!important}
+input.g{background:var(--blk);color:var(--ink);border:0;border-bottom:2px solid var(--pink);border-radius:6px 6px 0 0;padding:4px 8px;font-size:1.05rem;width:11em;max-width:100%}
+input.g.ok{color:var(--blk)!important}
+textarea{width:100%;background:var(--blk);color:var(--ink);border:1px solid var(--bd);border-radius:12px;padding:10px;font-size:1rem;min-height:70px}
+.row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:12px 0;flex-wrap:wrap}
+.score{background:var(--pink);color:var(--blk);font-weight:700;padding:8px 16px;border-radius:99px}
+.story{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:20px;font-size:1.1rem;line-height:2.2}
+u{text-decoration-color:var(--bad);text-decoration-thickness:2px;color:var(--bad)}
+.kt{display:inline-block;background:var(--blk);color:var(--ok);border:1px solid var(--bd);border-radius:99px;padding:2px 10px;font-size:.78rem;margin:0 6px 6px 0}.kp{font-family:'Playfair Display',serif;font-size:1.5rem;line-height:1.35;margin:8px 0 12px}.kcat{color:var(--pink);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}.kti{font-size:2.4rem;font-weight:700;color:var(--pink);text-align:center;margin:6px 0}#rules{grid-template-columns:1fr}.ru{color:var(--ink)!important}.use{border-top:1px dashed var(--bd);padding:8px 0 2px}.exl{margin:2px 0 6px 18px;padding:0;color:var(--mut);font-style:italic;font-size:.95rem}.note{color:var(--bad)!important;font-size:.9rem}.card .fm{color:var(--ok);font-size:.88rem}.cmp{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0}@media(max-width:560px){.cmp{grid-template-columns:1fr}}.cmp div{background:var(--blk);border-radius:10px;padding:8px 12px;font-size:.95rem}.cmp i{color:var(--pink);display:block;font-size:.85rem}</style></head><body><div class="wrap">
+<header><h1>Tenses B1+: <em>perfect &amp; continuous</em></h1><p class="sub">No time words. Read the situation, choose the tense, and write it yourself.</p></header>
+<nav id="nav"></nav>
+<section id="r"><h2>5 tenses, 5 meanings</h2><p class="lead">Ask: <i>result or activity? first or second? background or event?</i><br>Правила на русском, примеры на английском. Читайте правило, затем проговаривайте примеры вслух.</p><div class="grid" id="rules"></div></section>
+<section id="e"><h2>Explain it</h2><p class="lead">Read the sentence aloud. Say the tense <b>and why</b>, then reveal.</p><div class="chips" id="chips"></div><div id="elist"></div></section>
+<section id="z"><h2>Choose the tense</h2><p class="lead">10 random sentences. Pick the tense, read the reason.</p><div class="bar"><span class="score" id="qs">0 / 10</span><button class="btn" id="qn">New round ✦</button></div><div id="qlist"></div></section>
+<section id="t"><h2>Write the verb</h2><p class="lead">Type the correct form of the verb in brackets. Think about the situation first.</p><div class="bar"><span class="score" id="ts"></span></div><div id="tl"></div></section>
+<section id="f"><h2>Fix the mistake</h2><p class="lead">The <u>red</u> part is wrong. Type the correct form, then read why.</p><div class="bar"><span class="score" id="fs"></span></div><div id="fl"></div></section>
+<section id="s"><h2>The Wet Carpet</h2><p class="lead">Fill every gap in the detective story. Each gap needs a different tense job.</p><div class="story" id="story"></div><div class="row"><button class="btn" id="sc">Check story</button><span class="score" id="ss">–</span></div></section>
+<section id="k"><h2>Speaking missions</h2><p class="lead">Pick a mood, get a card and talk for one minute. No notes! Then your teacher asks: <i>why did you use that tense?</i></p><div class="chips" id="kc"></div><div class="q" id="kcard"></div><div class="row"><button class="btn" id="kn">Next card ✦</button><button class="btn ghost" id="kt">▶ 60 sec</button><button class="btn ghost" id="ks">Starters</button></div></section>
+<section id="m"><h2>Make your own</h2><p class="lead">Write one natural sentence for each situation. Then compare with the model and explain your tense aloud.</p><div id="ml"></div></section>
+
+<script>
+const R=[[`Present Perfect`,`have/has + V3`,`A finished action with a result now; life experience; "how many?".`,`Do I care about the result?`],
+[`Present Perfect Continuous`,`have/has been + V-ing`,`An activity that started in the past and is connected to now: evidence, or still going on.`,`Do I focus on the activity itself?`],
+[`Past Continuous`,`was/were + V-ing`,`The background of a story, or an action in progress when something happened.`,`Is it the scene, not the event?`],
+[`Past Perfect`,`had + V3`,`The earlier of two past events: it was finished before the other one.`,`What happened first?`],
+[`Past Perfect Continuous`,`had been + V-ing`,`An activity before another past moment that explains the situation then.`,`Did an earlier activity explain what I saw?`]];
+const T=[
+[`Present Perfect`,`I've lost my phone. Can you call it?`,`The result matters now: the phone is missing.`],
+[`Present Perfect`,`Look! Somebody has painted the door.`,`We see the result now.`],
+[`Present Perfect`,`Have you been to Japan?`,`Life experience; the exact moment is not important.`],
+[`Present Perfect`,`He's gone home. His desk is empty.`,`He isn't here now: a result in the present.`],
+[`Present Perfect`,`We've bought a new car. Come and see it!`,`News with a link to now.`],
+[`Present Perfect`,`I've read five chapters of this book, so I'm nearly at the end.`,`We count the amount: the result matters.`],
+[`Present Perfect Continuous`,`Your eyes are red. You've been crying.`,`We see evidence of a recent activity.`],
+[`Present Perfect Continuous`,`Why is your shirt wet? I've been washing the car.`,`The activity explains the present situation.`],
+[`Present Perfect Continuous`,`Her hands are covered in flour. She's been baking.`,`Evidence now; the activity is the point, not the result.`],
+[`Present Perfect Continuous`,`The kitchen smells of fish. Somebody has been cooking.`,`We see traces of a recent activity.`],
+[`Present Perfect Continuous`,`"You look tired." "Yes, I've been revising for the test."`,`The activity explains why she looks tired.`],
+[`Present Perfect Continuous`,`I'm exhausted. We've been climbing.`,`The activity (not the result) causes how I feel.`],
+[`Past Continuous`,`It was raining and the lamps were shining.`,`The background of the scene.`],
+[`Past Continuous`,`I was taking a shower when the phone rang.`,`Action in progress, interrupted by a short event.`],
+[`Past Continuous`,`Some students were reading, some were drawing.`,`Many actions in progress setting the scene.`],
+[`Past Continuous`,`We were having dinner when the lights went out.`,`Long action in progress + a short event.`],
+[`Past Continuous`,`A man was shouting at the waiter and everyone was looking at him.`,`Two actions in progress at the same moment.`],
+[`Past Continuous`,`She was crying, so I asked what was wrong.`,`Her crying was in progress; my question was the event.`],
+[`Past Perfect`,`When I got to the station, the train had left.`,`The train left first, then I arrived.`],
+[`Past Perfect`,`She was crying because she had lost her phone.`,`Losing it happened before crying.`],
+[`Past Perfect`,`The room was clean. Somebody had tidied it.`,`Tidying came before we saw the room.`],
+[`Past Perfect`,`We arrived at the cinema, but the film had started.`,`The film began before we got there.`],
+[`Past Perfect`,`He didn't want to eat because he had had a big lunch.`,`The lunch came first, then the refusal.`],
+[`Past Perfect`,`I knew his face. I had met him at Tom's party.`,`Meeting him was earlier than "knowing" him.`],
+[`Past Perfect Continuous`,`Her eyes were red. She had been crying.`,`The earlier activity explains what I saw.`],
+[`Past Perfect Continuous`,`He was out of breath because he had been running.`,`The activity before explains his state.`],
+[`Past Perfect Continuous`,`The floor was wet. Somebody had been mopping it.`,`Traces of an earlier activity.`],
+[`Past Perfect Continuous`,`I was exhausted when I got home. I had been working in the garden.`,`The activity (not a result) explains the tiredness.`],
+[`Past Perfect Continuous`,`The kids were dirty because they had been playing in the mud.`,`An earlier activity explains the situation.`],
+[`Past Perfect Continuous`,`The teacher was angry. We had been talking instead of listening.`,`The earlier activity explains her mood.`]];
+const G=[
+[`I can't get into my flat. I ___ (lose) my keys.`,[`have lost`,`'ve lost`],`Present Perfect`,`Result now.`],
+[`My hands are dirty. I ___ (repair) the bike.`,[`have repaired`,`'ve repaired`],`Present Perfect`,`Visible result now.`],
+[`"Where's Tom?" "He ___ (go) home. His desk is empty."`,[`has gone`,`'s gone`],`Present Perfect`,`He isn't here now.`],
+[`I ___ (read) five chapters of this book, so I'm nearly at the end.`,[`have read`,`'ve read`],`Present Perfect`,`We count the amount.`],
+[`Look! Somebody ___ (break) the window.`,[`has broken`,`'s broken`],`Present Perfect`,`We see the result.`],
+[`Your eyes are red. You ___ (cry).`,[`have been crying`,`'ve been crying`],`Present Perfect Continuous`,`Evidence of a recent activity.`],
+[`Why is your shirt wet? I ___ (wash) the car.`,[`have been washing`,`'ve been washing`],`Present Perfect Continuous`,`The activity explains it.`],
+[`Her hands are covered in flour. She ___ (bake).`,[`has been baking`,`'s been baking`],`Present Perfect Continuous`,`Evidence now.`],
+[`"You look tired." "Yes, I ___ (revise) for the test."`,[`have been revising`,`'ve been revising`],`Present Perfect Continuous`,`Activity explains the state.`],
+[`The kitchen smells of fish. Somebody ___ (cook).`,[`has been cooking`,`'s been cooking`],`Present Perfect Continuous`,`Traces of an activity.`],
+[`It ___ (rain) and the street was empty.`,[`was raining`],`Past Continuous`,`Background of the scene.`],
+[`I ___ (take) a shower when the phone rang.`,[`was taking`],`Past Continuous`,`In progress, then interrupted.`],
+[`We ___ (have) dinner when the lights went out.`,[`were having`],`Past Continuous`,`Long action + short event.`],
+[`Some students were reading and the others ___ (draw).`,[`were drawing`],`Past Continuous`,`Parallel actions in the scene.`],
+[`A man ___ (shout) at the waiter and everyone was looking at him.`,[`was shouting`],`Past Continuous`,`Action in progress at that moment.`],
+[`When we got to the cinema, the film ___ (start).`,[`had started`],`Past Perfect`,`Started before we arrived.`],
+[`She was crying because she ___ (fail) the test.`,[`had failed`],`Past Perfect`,`Failing came first.`],
+[`The room was spotless. Somebody ___ (clean) it.`,[`had cleaned`],`Past Perfect`,`Cleaning came before we saw it.`],
+[`I got to the station and the train ___ (leave).`,[`had left`],`Past Perfect`,`The train left first.`],
+[`He didn't want to eat because he ___ (have) a big lunch.`,[`had had`],`Past Perfect`,`The lunch came first.`],
+[`Her eyes were red. She ___ (cry).`,[`had been crying`],`Past Perfect Continuous`,`An earlier activity explains what I saw.`],
+[`He was out of breath because he ___ (run).`,[`had been running`],`Past Perfect Continuous`,`The activity before explains his state.`],
+[`The floor was wet. Somebody ___ (mop) it.`,[`had been mopping`],`Past Perfect Continuous`,`Traces of an earlier activity.`],
+[`The kids were dirty because they ___ (play) in the mud.`,[`had been playing`],`Past Perfect Continuous`,`Earlier activity explains the situation.`],
+[`The teacher was angry. We ___ (talk) instead of listening.`,[`had been talking`],`Past Perfect Continuous`,`The activity explains her mood.`]];
+const F=[
+[`I can't open the door. I <u>lost</u> my key.`,[`have lost`,`'ve lost`],`Present Perfect: the result matters now.`],
+[`Look at your eyes! You <u>have cried</u>.`,[`have been crying`,`'ve been crying`],`Present Perfect Continuous: evidence of a recent activity.`],
+[`When I arrived, the film <u>started</u>.`,[`had started`],`Past Perfect: it began before I arrived.`],
+[`He was tired because he <u>was running</u>.`,[`had been running`],`Past Perfect Continuous: the earlier activity explains his state.`],
+[`I <u>have been reading</u> five chapters of this book.`,[`have read`,`'ve read`],`Present Perfect: we count the amount.`],
+[`While I <u>had been walking</u> in the park, I saw a fox.`,[`was walking`],`Past Continuous: walking was in progress when I saw it.`],
+[`She was upset because she <u>has lost</u> her phone.`,[`had lost`],`Past Perfect: losing it came before the upset.`],
+[`The ground was wet. It <u>rained</u>.`,[`had been raining`,`had rained`],`Past Perfect (Continuous): earlier rain explains the wet ground.`],
+[`Your hands are black. What <u>did you do</u>?`,[`have you been doing`],`Present Perfect Continuous: asking about the activity behind a present situation.`],
+[`My phone isn't here. I think someone <u>took</u> it.`,[`has taken`,`'s taken`],`Present Perfect: the result matters now.`]];
+const S=[[`Detective Rose looked at the hall. The windows were open and the carpet was wet. It `,`(rain)`,[`had been raining`],`Past Perfect Continuous: the rain explains the wet carpet.`],
+[`. The housekeeper said: "I `,`(clean)`,[`was cleaning`],`Past Continuous: in progress when the noise came.`],
+[` the kitchen when I heard a noise. When I came into the hall, the vase `,`(break)`,[`had broken`],`Past Perfect: it broke before I arrived.`],
+[` and the window was open." Rose looked at her red eyes. "You `,`(cry)`,[`have been crying`,`'ve been crying`],`Present Perfect Continuous: red eyes are evidence.`],
+[`, haven't you?" "Yes," she said. "I `,`(lose)`,[`have lost`,`'ve lost`],`Present Perfect: the cat is missing now.`],
+[` my cat!" Rose laughed. "The cat is under the sofa. It `,`(sleep)`,[`has been sleeping`,`'s been sleeping`],`Present Perfect Continuous: the activity explains the situation.`],
+[` there. Look at his sleepy eyes!`,null,null,null]];
+const M=[[`Your friend's eyes are red and puffy. Say what you think she has been doing.`,`Present Perfect Continuous`,`You've been crying, haven't you?`],
+[`You are showing a friend what you have achieved in a game or at school.`,`Present Perfect`,`I've finished three levels and I've won two prizes.`],
+[`Describe the background of a rainy scene in a story.`,`Past Continuous`,`It was raining and people were running to the bus.`],
+[`Explain why you were late, using an earlier event.`,`Past Perfect`,`I was late because I had missed the bus.`],
+[`Explain why you were exhausted in class, using an earlier activity.`,`Past Perfect Continuous`,`I was exhausted because I had been gaming instead of sleeping.`],
+[`Say what you were doing when something dramatic happened.`,`Past Continuous`,`I was cooking when the fire alarm went off.`],
+[`You enter a room and see a mess. Guess what had happened.`,`Past Perfect`,`Somebody had broken the window and the cat had knocked over the vase.`],
+[`Your hands are black. Explain what you have been doing.`,`Present Perfect Continuous`,`I've been fixing my bike.`],
+[`Tell a short story with the background, an earlier event and an activity that explains it.`,`Past Continuous + Past Perfect + Past Perfect Continuous`,`It was raining. A man was standing at the door; he had lost his key and he had been waiting outside.`]];
+const grp=t=>t.split(' ')[0],sh=a=>[...a].sort(()=>Math.random()-.5);
+const nm=s=>s.toLowerCase().replace(/[’‘]/g,"'").replace(/[.!?]+$/,'').replace(/\s+/g,' ').trim();
+const ok=(v,a)=>a.map(nm).includes(nm(v));
+// nav
+const tabs=[["r","Rules"],["e","Explain it"],["z","Choose"],["t","Write the verb"],["f","Fix it"],["s","Story"],["m","Make your own"],["k","Speak"]];
+const nav=document.getElementById('nav');
+tabs.forEach(([i,n],k)=>{const b=document.createElement('button');b.textContent=n;b.className=k?'':'on';b.onclick=()=>{[...nav.children].forEach(c=>c.classList.toggle('on',c==b));tabs.forEach(([j])=>document.getElementById(j).classList.toggle('on',j==i))};nav.appendChild(b)});
+document.getElementById('r').classList.add('on');
+const _unused=R.map(r=>`<div class="card"><h3>${r[0]}</h3><span class="form">${r[1]}</span><p>${r[2]}</p><p class="test">${r[3]}</p></div>`).join('');
+// explain
+let filt='All';const chips=document.getElementById('chips');
+['All','Present','Past'].forEach(f=>{const b=document.createElement('button');b.className='chip'+(f==filt?' on':'');b.textContent=f;b.onclick=()=>{filt=f;[...chips.children].forEach(c=>c.classList.toggle('on',c==b));rE()};chips.appendChild(b)});
+const shb=document.createElement('button');shb.className='chip';shb.textContent='🔀 Shuffle';shb.onclick=()=>rE(1);chips.appendChild(shb);
+function rE(s){let l=T.filter(x=>filt=='All'||grp(x[0])==filt);if(s)l=sh(l);
+document.getElementById('elist').innerHTML=l.map(x=>`<div class="q"><p class="s">${x[1]}</p><p class="hint">Which tense? Why?</p><button class="btn ghost" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><div class="rev"><span class="tag">${x[0]}</span><br>${x[2]}</div></div>`).join('')}rE();
+// choose
+const names=R.map(r=>r[0]);let qo,qd;
+function nQ(){qo=0;qd=0;const el=document.getElementById('qlist');el.innerHTML='';qS();
+sh(T).slice(0,10).forEach(x=>{const d=document.createElement('div');d.className='q';const o=sh([x[0],...sh(names.filter(n=>n!=x[0])).slice(0,3)]);
+d.innerHTML=`<p class="s">${x[1]}</p><div class="opts"></div><div class="rev"><b>${x[0]}</b>: ${x[2]}</div>`;const bs=[];
+o.forEach(n=>{const b=document.createElement('button');b.textContent=n;bs.push(b);b.onclick=()=>{bs.forEach(y=>{y.disabled=true;if(y.textContent==x[0])y.classList.add('ok')});if(n==x[0])qo++;else b.classList.add('no');qd++;d.querySelector('.rev').classList.add('show');qS()};d.querySelector('.opts').appendChild(b)});el.appendChild(d)})}
+function qS(){document.getElementById('qs').textContent=qo+' / 10'+(qd==10?' ✦ done!':'')}
+document.getElementById('qn').onclick=nQ;nQ();
+// typed engine
+function typed(el,sc,items,gap){let good=0;const upd=()=>sc.textContent=good+' / '+items.length+(good==items.length?' ✦ all correct!':'');upd();
+items.forEach(it=>{const d=document.createElement('div');d.className='q';const inp=document.createElement('input');inp.className='g';inp.placeholder='write here';inp.autocomplete='off';
+const ans=it[1],why=gap?it[2]+': '+it[3]:it[2];let txt=it[0];
+if(gap){const p=txt.split('___');d.innerHTML='<p class="s"></p>';const s=d.firstChild;s.append(p[0]);s.appendChild(inp);s.append(p[1]||'')}
+else{d.innerHTML=`<p class="s">${txt}</p><p class="hint">Write the correct form:</p>`;d.appendChild(inp)}
+const row=document.createElement('div');row.className='row';const c=document.createElement('button');c.className='btn';c.textContent='Check';const a=document.createElement('button');a.className='btn ghost';a.textContent='Show answer';row.append(c,a);d.appendChild(row);
+const rv=document.createElement('div');rv.className='rev';d.appendChild(rv);let done=0;
+c.onclick=()=>{if(!inp.value.trim())return;if(ok(inp.value,ans)){inp.classList.add('ok');inp.classList.remove('no');rv.innerHTML='✓ '+why;rv.classList.add('show');if(!done){done=1;good++;upd()}}else{inp.classList.add('no');rv.innerHTML='Not quite. Think about the situation and try again!';rv.classList.add('show')}};
+inp.onkeydown=e=>{if(e.key=='Enter')c.click()};
+a.onclick=()=>{rv.innerHTML='Answer: <b>'+ans[0]+'</b><br>'+why;rv.classList.add('show')};
+el.appendChild(d)})}
+typed(document.getElementById('tl'),document.getElementById('ts'),G.map(g=>[g[0],g[1],g[2],g[3]]),1);
+typed(document.getElementById('fl'),document.getElementById('fs'),F,0);
+// story
+const st=document.getElementById('story');const ins=[];
+S.forEach(p=>{st.append(p[0]);if(p[1]){const i=document.createElement('input');i.className='g';i.style.width='9em';i.placeholder=p[1];st.appendChild(i);ins.push([i,p[2],p[3]])}});
+document.getElementById('sc').onclick=()=>{let n=0;const w=[];ins.forEach(([i,a,y])=>{if(ok(i.value,a)){i.classList.add('ok');i.classList.remove('no');n++}else{i.classList.add('no');w.push(y+' (answer: '+a[0]+')')}});
+document.getElementById('ss').textContent=n+' / '+ins.length;
+let r=document.getElementById('sr');if(!r){r=document.createElement('div');r.id='sr';r.className='rev';document.getElementById('s').appendChild(r)}
+r.innerHTML=w.length?'<b>Check these:</b><br>'+w.join('<br>'):'Perfect! Now read the story aloud and say why each tense is used.';r.classList.add('show')};
+// make your own
+document.getElementById('ml').innerHTML=M.map(m=>`<div class="q"><p class="s">${m[0]}</p><textarea placeholder="Write your sentence..."></textarea><div class="row"><button class="btn ghost" onclick="this.parentNode.nextElementSibling.classList.toggle('show')">Show model</button></div><div class="rev"><span class="tag">${m[1]}</span><br><i>${m[2]}</i><br><span class="hint">Now explain: why this tense and not another one?</span></div></div>`).join('');
+const K=[
+[`Detective eyes`,`Crime scene`,`Look at a teacher's desk: a cold coffee, three red pens, a crumpled paper. What has happened? What has the teacher been doing?`,`Present Perfect + Present Perfect Continuous`,`The teacher has... / Somebody has been... / It looks like...`,`Result or activity?`],
+[`Detective eyes`,`Mystery guest`,`Your friend arrives with muddy shoes, wet hair and a huge smile. What has she been doing? What has happened?`,`Present Perfect + Present Perfect Continuous`,`She has been... / Something has happened: she has...`,`Why "has been doing" and not "has done"?`],
+[`Detective eyes`,`Hot phone`,`Your phone is hot, the battery is at 5% and your thumbs hurt. What have you been doing?`,`Present Perfect Continuous`,`I've been... / I've been playing... / I've been chatting...`,`Which words show an activity, not a result?`],
+[`Detective eyes`,`The fridge`,`You open the fridge and half the food has disappeared. What has happened? Who has been eating it?`,`Present Perfect + Present Perfect Continuous`,`Somebody has eaten... / Somebody has been eating...`,`Which sentence counts things, and which one describes an activity?`],
+[`Tell the story`,`Lost`,`Tell a story about getting lost. Where were you going, what was happening around you, what had gone wrong before?`,`Past Continuous + Past Perfect`,`I was walking to... / People were... / I had forgotten...`,`Which sentences are background, and which is the earlier event?`],
+[`Tell the story`,`Best excuse`,`Your teacher asks why you didn't do your homework. Invent the most creative excuse, with what had happened before.`,`Past Perfect`,`My dog had eaten... / When I got home, my laptop had...`,`What happened first? What happened second?`],
+[`Tell the story`,`Strange room`,`You come home and your room is completely different. What had happened? What had somebody been doing?`,`Past Perfect + Past Perfect Continuous`,`Somebody had moved... / Somebody had been painting...`,`Result or activity?`],
+[`Tell the story`,`Found phone`,`You find a phone in the park, still warm. What had its owner been doing? What were people doing around you?`,`Past Perfect Continuous + Past Continuous`,`The owner had been... / A man was running... / Children were...`,`Which tense is the scene, and which explains the phone?`],
+[`Tell the story`,`Worst exam`,`Describe an exam where everything went wrong: what had you been doing the night before, what were you thinking during the test, what had you forgotten?`,`Past Perfect Continuous, Past Continuous, Past Perfect`,`I had been... / I was thinking... / I had forgotten...`,`Name the tense in each sentence.`],
+[`Life so far`,`Weirdest food`,`What is the weirdest food you have ever tried? Who gave it to you? What have you learned about your taste?`,`Present Perfect (+ Past Simple)`,`I've tried... / I've never... / I've learned...`,`Why do you switch from Present Perfect to Past Simple?`],
+[`Life so far`,`Proud`,`Name three things you have done that most people your age haven't. What have you been working on? How is it going?`,`Present Perfect + Present Perfect Continuous`,`I've... / I've been working on... / It has been going...`,`Which sentence has a result, which has an activity?`],
+[`Life so far`,`On repeat`,`Which song or series have you been listening to or watching again and again? How many times have you seen it?`,`Present Perfect Continuous + Present Perfect`,`I've been listening to... / I've seen it... times`,`Why does "how many times" need Present Perfect?`],
+[`Life so far`,`Never again`,`Tell me about something you've done and would never do again. What had you expected to happen?`,`Present Perfect + Past Perfect`,`I've... / I had expected... / It turned out...`,`Which event happened first in your story?`],
+[`Mixed mission`,`Detective`,`The school mascot has disappeared! You are the witness: what were you doing, what had happened before, and what has the head teacher been doing about it?`,`Past Continuous, Past Perfect, Present Perfect Continuous`,`I was... when I saw... / Somebody had... / The head teacher has been...`,`Name three different tenses you used.`],
+[`Mixed mission`,`Time traveller`,`A time traveller arrives, tired and covered in dust. What has she been doing? What has she seen? What had she been looking for?`,`Present Perfect Continuous, Present Perfect, Past Perfect Continuous`,`She has been travelling... / She has seen... / She had been looking for...`,`Which sentences are about the present, which about before?`]];
+let kf='All',kc=null,kT=null;
+const kch=document.getElementById('kc');
+['All',...new Set(K.map(x=>x[0]))].forEach(f=>{const b=document.createElement('button');b.className='chip'+(f=='All'?' on':'');b.textContent=f;b.onclick=()=>{kf=f;[...kch.children].forEach(c=>c.classList.toggle('on',c==b));kN()};kch.appendChild(b)});
+function kN(){clearInterval(kT);document.getElementById('kt').textContent='▶ 60 sec';const l=K.filter(x=>kf=='All'||x[0]==kf);let c;do{c=l[Math.floor(Math.random()*l.length)]}while(l.length>1&&c==kc);kc=c;
+document.getElementById('kcard').innerHTML='<div class="kcat">'+c[0]+' · '+c[1]+'</div><div class="kp">'+c[2]+'</div><span class="kt">'+c[3]+'</span><div class="rev"><b>Starters:</b> '+c[4]+'</div><p class="hint" style="margin:10px 0 0">Teacher asks: <i>'+c[5]+'</i></p>'}
+document.getElementById('kn').onclick=kN;
+document.getElementById('ks').onclick=()=>document.querySelector('#kcard .rev').classList.toggle('show');
+document.getElementById('kt').onclick=()=>{clearInterval(kT);let s=60;const b=document.getElementById('kt');b.textContent='⏱ '+s;kT=setInterval(()=>{s--;b.textContent=s>0?'⏱ '+s:'Time! ✦';if(s<=0)clearInterval(kT)},1000)};
+kN();
+const RR=[
+[`Present Perfect`,`have / has + V3`,`Вопрос: Have you lost…? Has she gone…?  Отрицание: I haven't lost… She hasn't gone…`,[
+[`Результат в настоящем. Действие закончилось, но важен его результат сейчас.`,[`I've lost my keys. (Я не могу войти.)`,`She has broken her leg. (Нога в гипсе.)`,`Look! Somebody has opened the window.`,`He has cleaned his room, so you can come in.`]],
+[`Жизненный опыт. Когда именно это было — неважно, важно, что это было.`,[`Have you been to Italy?`,`I've never eaten sushi.`,`She has met a famous actor.`,`We have tried skydiving.`]],
+[`Новость с важным итогом.`,[`The president has resigned.`,`We've won the match!`,`They have bought a house.`]],
+[`Количество: «сколько уже сделано?» Важен результат.`,[`I've written three pages.`,`She has read ten books.`,`We've visited five countries.`]]],
+`Если названо конкретное законченное время (yesterday, in 2019), нужен Past Simple, а не Present Perfect.`,
+`Результат важен сегодня? Спрашивают «сколько» или про опыт? → Present Perfect.`],
+[`Present Perfect Continuous`,`have / has been + V-ing`,`Вопрос: Have you been crying? Has she been working?  Отрицание: I haven't been sleeping. She hasn't been working.`,[
+[`Процесс, который был совсем недавно и виден по следам в настоящем.`,[`Your eyes are red. You've been crying.`,`Why are you out of breath? I've been running.`,`The ground is wet. It's been raining.`,`Her hands are covered in flour. She's been baking.`]],
+[`Действие началось в прошлом и всё ещё продолжается. Важен сам процесс.`,[`I've been learning English.`,`She has been working on this project.`,`They've been waiting for the bus.`]],
+[`Вопрос о процессе, интерес или раздражение.`,[`What have you been doing?`,`Who has been using my laptop?`,`Have you been eating my chocolate?`]]],
+`С глаголами состояния (know, love, want, have = «иметь») Continuous не используется: I've known him. (не: I've been knowing).`,
+`Важен сам процесс, а не результат? Есть следы деятельности? → Present Perfect Continuous.`],
+[`Past Continuous`,`was / were + V-ing`,`Вопрос: Was she sleeping? Were they playing?  Отрицание: I wasn't sleeping. They weren't playing.`,[
+[`Фон рассказа: описание сцены, декорации.`,[`It was raining and a dog was barking.`,`The sun was shining and children were playing.`,`The street was quiet. A cat was sleeping on a car.`]],
+[`Длинное действие в процессе, которое прервало короткое действие (Past Simple).`,[`I was taking a shower when the phone rang.`,`She was walking home when it started to rain.`,`We were watching a film when the lights went out.`]],
+[`Два длительных действия одновременно.`,[`Mum was cooking while Dad was cleaning.`,`I was reading and my brother was playing games.`]],
+[`Процесс, а не результат (сравните с Past Simple).`,[`I was reading a book. (Читал — процесс.)`,`I read a book. (Прочитал — результат.)`]]],
+`Короткие, последовательные события — это Past Simple: She opened the door and went in.`,
+`Это сцена или фон, а не событие? Действие шло в тот момент? → Past Continuous.`],
+[`Past Perfect`,`had + V3 (для всех лиц)`,`Вопрос: Had you left? Had she called?  Отрицание: I hadn't left. She hadn't called.`,[
+[`Действие, которое произошло раньше другого прошедшего действия.`,[`When I arrived, the film had started.`,`She had left before I called.`,`The shop had closed, so we went home.`]],
+[`Причина прошлой ситуации: что случилось до этого.`,[`He was angry because somebody had broken his phone.`,`The room was clean. Someone had tidied it.`,`The street was empty. Everyone had gone home.`]],
+[`Объяснение: откуда я что-то знал или как что-то понял.`,[`I knew his face. I had met him at Tom's party.`,`She didn't eat because she had had a big lunch.`]]],
+`Если порядок событий и так понятен (and, then, потом), достаточно Past Simple: I opened the door and went in.`,
+`Какое событие было первым? Если нужно показать «раньше» → Past Perfect.`],
+[`Past Perfect Continuous`,`had been + V-ing`,`Вопрос: Had you been crying? Had she been working?  Отрицание: I hadn't been sleeping. She hadn't been working.`,[
+[`Процесс, который шёл до другого момента в прошлом и объясняет ситуацию тогда.`,[`Her eyes were red. She had been crying.`,`He was out of breath because he had been running.`,`The floor was wet. Somebody had been mopping it.`]],
+[`Усталость, грязь, следы деятельности в прошлом.`,[`I was exhausted when I got home. I had been working in the garden.`,`The kids were dirty because they had been playing in the mud.`]],
+[`Раздражение или объяснение чьего-то поведения.`,[`The teacher was angry. We had been talking instead of listening.`,`I was upset because my friends had been laughing at me.`]]],
+`С глаголами состояния Continuous не используется: I had known him. (не: had been knowing).`,
+`Был ли это процесс до другого момента, который всё объясняет? → Past Perfect Continuous.`]];
+const CC=[[`Present Perfect и Present Perfect Continuous`,[[`I've painted the door.`,`Готово. Результат: дверь покрашена.`],[`I've been painting the door.`,`Процесс. Краска на руках.`],[`I've read three chapters.`,`Сколько: считаем результат.`],[`I've been reading, so my eyes hurt.`,`Процесс объясняет ощущение.`]]],
+[`Past Continuous и Past Perfect`,[[`When he came in, I was cooking.`,`Я готовил в тот момент (процесс).`],[`When he came in, I had cooked.`,`Я уже приготовил (результат, раньше).`]]],
+[`Past Perfect и Past Perfect Continuous`,[[`She was tired. She had finished the report.`,`Закончила: результат.`],[`She was tired. She had been writing the report.`,`Писала: процесс объясняет усталость.`]]],
+[`Past Simple и Past Perfect`,[[`I came home and she left.`,`Сначала я пришёл, потом она ушла.`],[`I came home and she had left.`,`Она ушла раньше, до моего прихода.`]]]];
+const ul=a=>`<ul class='exl'>${a.map(e=>`<li>${e}</li>`).join('')}</ul>`;
+document.getElementById('rules').innerHTML=`<div class='card'><h3>Три главных вопроса</h3><p class='ru'>1. <b>Результат или процесс?</b> → Present Perfect или Present Perfect Continuous</p><p class='ru'>2. <b>Что было раньше?</b> → Past Perfect или Past Perfect Continuous</p><p class='ru'>3. <b>Фон или событие?</b> → Past Continuous или Past Simple</p></div>`+RR.map(r=>`<div class='card'><h3>${r[0]}</h3><span class='form'>${r[1]}</span><p class='fm'>${r[2]}</p>${r[3].map((u,i)=>`<div class='use'><p class='ru'><b>${i+1}.</b> ${u[0]}</p>${ul(u[1])}</div>`).join('')}<p class='note'>⚠ ${r[4]}</p><p class='test'>${r[5]}</p></div>`).join('')+`<div class='card'><h3>Сравните пары</h3>${CC.map(c=>`<p class='ru' style='margin-top:10px'><b>${c[0]}</b></p><div class='cmp'>${c[1].map(x=>`<div>${x[0]}<i>${x[1]}</i></div>`).join('')}</div>`).join('')}</div>`;
+</script></div></body></html>
